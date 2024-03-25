@@ -1,0 +1,53 @@
+.header{
+    color: rgb(167, 167, 224);
+    margin-top: 2%;
+}
+
+.form{
+    margin-left: 2%;
+    width:auto;
+    margin: -950px 500px;
+    box-shadow: -2px -2px 10px black;
+    border: solid rgb(107, 191, 212) 2px;
+    padding: 20px;
+    border-radius: 10px;  
+    position: absolute;
+}
+
+.firstname{
+    margin-right: 2%;
+}
+
+.password{
+    margin-right: 2%;
+}
+
+.radio-button{
+    margin-top: 1%;
+}
+
+
+.age{
+    margin-right: 2%;
+}
+
+
+.zipcode{
+    margin-left: 1%;
+}
+.city{
+    margin-left: 1%;
+}
+
+.example-button-row{
+    margin-left: 160px
+
+}
+
+button{
+    margin-right: 3%;
+}
+.email{
+    width: 100%;
+}
+

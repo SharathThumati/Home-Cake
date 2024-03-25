@@ -1,0 +1,57 @@
+<div id="image-viewer">
+  <div class="img-div">
+    <mat-card class="card">
+      <img src="../../assets/{{mycake.id}}.jpeg" alt="">
+
+      <mat-card-actions>
+        <button *ngIf="loginservice.isAdminLoggedIn&&!loginservice.isUserLoggedIn" mat-button
+          (click)="editCake()"><mat-icon>edit</mat-icon>Edit</button>
+        <button *ngIf="loginservice.isAdminLoggedIn&&!loginservice.isUserLoggedIn" mat-button
+          (click)="deleteCake()"><mat-icon>delete</mat-icon>Delete</button>
+
+
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div class="content-div">
+  
+    <h1 class="name"><span class="span"><mat-icon style="color: rgb(57, 183, 57);">fiber_manual_record</mat-icon></span>
+      {{mycake.name}} </h1>
+    <div>
+      <hr>
+    </div>
+    <h1 class="price">₹{{mycake.price}}</h1>
+    <div class="star">
+      <h5>{{mycake.rating}}<mat-icon id="star" style="font-size:medium; padding-top: 1px;">star</mat-icon></h5>
+    </div>
+    <div></div>
+  
+     
+    
+  <mat-tab-group>
+      <mat-tab label="Description" style="word-spacing: 10px;">
+        <p>{{mycake.description}}</p>
+      </mat-tab>
+      <mat-tab label="ProductInfo">
+        <ul>
+          <li>Weight : {{mycake.productInfo?.weight}} </li>
+          <li>Flavour : {{mycake.productInfo?.flavour}}</li>
+          <li>Shape : {{mycake.productInfo?.shape}}</li>
+          <li>Type : {{mycake.productInfo?.type}}</li>
+          <li>County Of Origin : {{mycake.productInfo?.countyOfOrigin}}</li>
+        </ul>
+      </mat-tab>
+      <mat-tab label="MoreIfo">
+        <ul>
+          <li>{{mycake.moreInfo?.point1}}</li>
+          <li>{{mycake.moreInfo?.point2}}</li>
+          <li>{{mycake.moreInfo?.point3}}</li>
+        </ul>
+      </mat-tab>
+    </mat-tab-group>
+    <div>
+      <button class="button" style="margin-left: 10px;width: 98%;background-color: rgb(21, 14, 225);" (click)="order()" *ngIf="!loginservice.isAdminLoggedIn&&loginservice.isUserLoggedIn"><span style="color: white;">Order Now</span></button></div>
+  </div>
+</div>
+<br><br>
+<app-footer></app-footer>

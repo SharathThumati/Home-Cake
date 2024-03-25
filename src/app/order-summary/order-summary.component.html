@@ -1,0 +1,25 @@
+
+<div>
+    <mat-grid-list cols="4" rowHeight="450px">
+        <mat-grid-tile *ngFor="let order of orderdata">
+            <mat-card>
+                <mat-card-content >
+                    <p>Name : {{order.firstName}}.{{order.lastName}}</p>
+                    <p>Phone : {{order.phone}}</p>
+                    <p>Cake Name : {{order.itemName}}</p>
+                    <p>Number Of Cakes : {{order.NoOfItems}}</p>
+                    <p>Cake Price : ₹{{order.totalAmount}}</p>
+                    <p>Weight:{{order.weight}}kgs</p>
+                    <p>Delivery Date : {{order.date}}</p>
+                    <p>Delivery Type : {{order.deliveryType}}</p>
+                    <p>Message on Cake : {{order.messageOnCake}}</p>
+                    <p *ngIf="order.deliveryType=='Door-Delivery'">street : {{order.street}}</p>
+                    <p *ngIf="order.deliveryType=='Door-Delivery'">city : {{order.street}}</p>
+                    <p *ngIf="order.deliveryType=='Door-Delivery'">state : {{order.state}}</p>
+                    <p *ngIf="order.deliveryType=='Door-Delivery'">zipCode : {{order.zipCode}}</p>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<button mat-raised-button style="margin: 20px 500px;" color="primary" (click)="backtoHome()">back to home</button>

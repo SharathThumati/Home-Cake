@@ -1,0 +1,31 @@
+<div><img style="width: 100%;" src="../../assets/backgroundd.jpeg" alt="">
+    <div class="main-container">
+        <div class="row">
+            <div>
+                <h1 style="color: aliceblue;">Sign in</h1>
+            </div>
+            <div style="display: flex;">
+                <h4 style="color: aliceblue;">Don't have an account?</h4><button class="button-tag" mat-button
+                    color="primary" (click)="registerForm()">Sign up</button>
+            </div>
+
+        </div>
+
+        <div>
+            <form class="example-form" (ngSubmit)="login()">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Enter Email Id</mat-label>
+                    <input matInput type="email" name="email" placeholder="Ex.sharath@gmail.com" [(ngModel)]="email">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Enter Password</mat-label>
+
+                    <input matInput type="password" name="password" placeholder="Ex.sharath@1234"
+                        [(ngModel)]="password">
+                </mat-form-field>
+                <button class="button-class" type="submit" mat-raised-button color="primary" style="float: right;">SIGN
+                    IN</button>
+            </form>
+        </div>
+    </div>
+</div>

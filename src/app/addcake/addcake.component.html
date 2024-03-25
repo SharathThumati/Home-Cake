@@ -1,0 +1,131 @@
+<div><img src="../../assets/main.jpeg" alt="" style="width: 100%;">
+    <div>
+
+        <form [formGroup]="detailsForm" class="example-form">
+            <h4 style="color:blue;font-size: 20px;">Adding Cake Details</h4>
+
+            <div>
+                <mat-form-field style="width: 100%;" appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name">
+                    <mat-error class="error" *ngIf="name?.errors?.['required']">
+                        Name is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field style="width: 100%;" appearance="fill">
+                    <mat-label>Price</mat-label>
+                    <input matInput formControlName="price">
+
+                    <mat-error *ngIf="price?.errors?.['required']">price is required </mat-error>
+                    <mat-error *ngIf="price?.errors?.['pattern']">price should be digits </mat-error>
+                    <mat-error *ngIf="price?.errors?.['min']">price should be greater than zero </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field style="width: 100%;" appearance="fill">
+                    <mat-label>Description</mat-label>
+                    <input matInput formControlName="description">
+                    <mat-error class="error" *ngIf="description?.errors?.['required']">
+                        description is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field style="width: 100%;" appearance="fill">
+                    <mat-label>Rating</mat-label>
+                    <input matInput formControlName="rating">
+                    <mat-error *ngIf="rating?.errors?.['required']">Rating is required </mat-error>
+                    <mat-error *ngIf="rating?.errors?.['pattern']">Rating should be digits </mat-error>
+                    <mat-error *ngIf="rating?.errors?.['min']">Rating should be greater than zero </mat-error>
+                    <mat-error *ngIf="rating?.errors?.['max']">Rating should be less than equal 5 </mat-error>
+                </mat-form-field>
+            </div>
+
+
+            <div class="expandform" formGroupName="productInfo">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            productInfo
+                        </mat-panel-title>
+
+                    </mat-expansion-panel-header>
+                    <div style="display: flex;flex-direction: column;">
+                        <mat-form-field>
+                            <mat-label>weight</mat-label>
+                            <input matInput formControlName="weight">
+                            <mat-error *ngIf="weight?.errors?.['required']">weight is required </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>flavour</mat-label>
+                            <input matInput formControlName="flavour">
+                            <mat-error *ngIf="flavour?.errors?.['required']">flavour is required </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>shape</mat-label>
+                            <input matInput formControlName="shape">
+                            <mat-error *ngIf="shape?.errors?.['required']">shape is required </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>type</mat-label>
+                            <input matInput formControlName="type">
+                            <mat-error *ngIf="type?.errors?.['required']">type is required </mat-error>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>countyOfOrigin</mat-label>
+                            <input matInput formControlName="countyOfOrigin">
+                            <mat-error *ngIf="countyOfOrigin?.errors?.['required']">County Of Origin is required
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+
+                </mat-expansion-panel>
+            </div>
+
+
+            <div class="expandform" formGroupName="moreInfo">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            moreInfo
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="display: flex;flex-direction: column;">
+                        <mat-form-field class="point1" appearance="fill">
+                            <mat-label>point1</mat-label>
+                            <input matInput formControlName="point1">
+                            <mat-error *ngIf="point1?.errors?.['required']">point1 is required </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="point1" appearance="fill">
+                            <mat-label>point2</mat-label>
+                            <input matInput formControlName="point2">
+                            <mat-error *ngIf="point2?.errors?.['required']">point2 is required </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="point" appearance="fill">
+                            <mat-label>point3</mat-label>
+                            <input matInput formControlName="point3">
+                            <mat-error *ngIf="point3?.errors?.['required']">point3 is required </mat-error>
+                        </mat-form-field>
+
+                    </div>
+                </mat-expansion-panel>
+            </div>
+
+            <div class="example-button-row">
+                <button mat-raised-button color="accent" type="reset">Reset</button>
+                <button style="margin-left: 10px;" [disabled]="!detailsForm.valid" mat-raised-button color="primary"
+                    type="submit" (click)="addcake()">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+.grid-container {
+  margin: 20px;
+
+
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px;
+}
+
+.img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.main-img {
+  width: 50%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 10%;
+  margin-left: 6%;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+.price {
+
+  margin-top: -20px;
+  font-size: medium;
+  color: rgb(217, 73, 73);
+}
+
+h5 {
+  background-color: green;
+  border-radius: 5px;
+  width: 46px;
+  height: 25px;
+  color: white;
+  align-items: center;
+  display: flex;
+  align-items: self-start;
+  justify-content: space-evenly;
+  padding-left: 2px;
+  padding-top: 3px;
+  border: 1px solid black;
+  font-size: medium;
+}
+
+.star {
+  margin-top: -15px;
+}
+
+.title {
+  display: flex;
+  gap: 3%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin-top: 100px;
+  font-size: 40px;
+  word-spacing: 10px;
+  letter-spacing: 1px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  margin-top: 20px;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+mat-icon {
+  color: red;
+  font-size: 25px;
+}
+
+mat-grid-list:hover {
+
+  cursor: pointer;
+}

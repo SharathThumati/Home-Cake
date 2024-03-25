@@ -1,0 +1,32 @@
+<div class="grid-container">
+
+  <app-search (searchedText)="searchTitle($event)"></app-search>
+
+  <div class="title"><img class="main-img" src="../../assets/main1.jpeg" alt="">
+    <div>
+      <h1 style="text-shadow: 1px 1px 2px;;"><u>When You Share A Cake,<div style="margin-top: 10px;">You Share
+            Love!<mat-icon style="color: red;">favorite</mat-icon></div></u></h1>
+      <h2 style="color: rgb(49, 41, 41);text-shadow: 1px 1px 2px;">Fresh Cakes made
+        with Best Ingredients</h2>
+      <div><img src="../../assets/smile-party-cake2.jpg" alt="" style="width: 50%;margin-left: 20%; "></div>
+    </div>
+    
+  </div>
+  
+  
+  <mat-grid-list cols="4" rowHeight="350px">
+    <mat-grid-tile *ngFor="let cake of cakesdata">
+      <mat-card class="dashboard-card" routerLink="viewDetails/{{cake.id}}">
+        <img class="img" src="../../assets/{{cake.id}}.jpeg" alt="" style="width: 100%;height: 80%;">
+        <mat-card-content class="dashboard-card-content">
+          <h3>{{cake.name}}</h3>
+          <div class="price">Price : {{cake.price}}</div>
+          <div class="star">
+            <h5>{{cake.rating}}<mat-icon id="star" style="font-size:medium; padding-top: 1px;">star</mat-icon></h5>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<app-footer></app-footer>

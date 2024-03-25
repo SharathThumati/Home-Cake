@@ -1,0 +1,214 @@
+<div class="maindiv">
+    <div><mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Order Summary , weight & Quantity
+                </mat-panel-title>
+                <mat-panel-description>
+                    View your order details & Set Weight and No.Of Cakes
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div style="display: flex;gap: 3%;"><img src="../../assets/{{ mycake.id }}.jpeg" alt="" width="30%">
+                <!-- <div>
+                    <h4>{{mycake.name}}</h4>
+                    <h4>Quantity:1</h4>
+                    <h4>₹{{mycake.price}}</h4>
+                    <h4>weight:{{mycake.productInfo?.weight}}</h4>
+                </div> -->
+                <div><h2>Cake Name:{{mycake.name}}</h2>
+                    Weight:
+                    <div>
+                        <mat-radio-group aria-label="Select an option" [(ngModel)]="orderData.weight">
+                            <mat-radio-button (click)="updateQuantity(0.5)">0.5kg</mat-radio-button>
+                            <mat-radio-button (click)="updateQuantity(1)">1kg</mat-radio-button>
+                            <mat-radio-button (click)="updateQuantity(1.5)">1.5kg</mat-radio-button>
+                            <mat-radio-button (click)="updateQuantity(2)">2kg</mat-radio-button>
+                            <mat-radio-button (click)="updateQuantity(2.5)">2.5kg</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+
+                    <!-- <b>Weight :</b><br>
+                <div style="display: flex;margin-right: 8px;">
+                  <button class="kgbutton" (click)="updateQuantity(1)">1kg</button>
+                  <button class="kgbutton" (click)="updateQuantity(1.5)">1.5kg</button>
+                  <button class="kgbutton" (click)="updateQuantity(3)">3kg</button>
+                  <button class="kgbutton" (click)="updateQuantity(2)">2kg</button>
+                </div> -->
+                    <div style="margin-top: 10px;">Number Of Cakes:
+
+                        <input type="number" min="1" max="10" value="1" style="width: 20%;"
+                            [(ngModel)]="userEnteredQuantity" name="userEnteredQuantity"
+                            (change)="calculateTotalPrice()">
+
+                    </div>
+
+                    <!-- <mat-form-field>
+               
+                  <input matInput type="text" [(ngModel)]="userEnteredQuantity" name="userEnteredQuantity"
+                    (change)="calculateTotalPrice()" style="width: 80px;">
+          
+                </mat-form-field> -->
+                    <h3 style="margin-top: 30px;">Overall Weight: <span
+                            style="color: red;">{{selectedQuantity}}kg</span></h3>
+                    <div>
+                        <h3 style="margin-top: 30px;">Total Amount to be paid : <span
+                                style="color: red;">₹{{totalPrice}}</span> </h3>
+                    </div>
+                </div>
+            </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel style="margin-top: 10px;">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Order Information
+                </mat-panel-title>
+                <mat-panel-description>
+                    Set your order date and message on cake
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <!-- <mat-form-field style="width: 100%;">
+                <input matInput [(ngModel)]="myorder.orderDate"   [min]="minDate"   [matDatepicker]="picker" placeholder="Order Date"
+                  #orderdate="ngModel" name="orderdate" nrequired>
+                
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker   ></mat-datepicker>
+              </mat-form-field> -->
+            <mat-form-field class="inputaDateAndMessage">
+                <mat-label>Order Date</mat-label>
+                <input matInput [(ngModel)]="date" [min]="minDate" [matDatepicker]="picker" placeholder="Order Date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field> <br>
+            <mat-form-field class="inputaDateAndMessage">
+                <mat-label>Message on Cake</mat-label>
+                <input matInput [(ngModel)]="messageOnCake" name="messageOnCake" type="text"
+                    placeholder="Ex.Happy Birthday">
+            </mat-form-field>
+        </mat-expansion-panel>
+    </div>
+    <div>
+        <mat-tab-group mat-align-tabs="start">
+            <mat-tab label="Door Delivery" style="word-spacing: 10px;;">
+
+
+                <form (ngSubmit)="placeOrder()">
+                    <h2>Shipping information</h2>
+                    <div class="example-container">
+
+                        <mat-form-field style="width: 48%;">
+                            <input matInput placeholder="First Name" #firstName="ngModel" type="text" name="firstName"
+                                [(ngModel)]="userDataForOnline.firstName" required>
+
+                            <mat-error *ngIf="firstName.errors?.['required']">
+                                First name is required
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field style="width: 48%;margin-left: 10px;">
+                            <input matInput placeholder="Last Name" #lastName="ngModel" type="text" name="lastName"
+                                [(ngModel)]="userDataForOnline.lastName" required>
+                            <mat-error *ngIf="lastName.errors?.['required']">
+                                Last name is required
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field style="width: 48%;">
+                            <input matInput placeholder="Phone Number" type="text" #phone="ngModel" name="phone"
+                                [(ngModel)]="userDataForOnline.phone" required pattern="[987][0-9]{9}">
+                            <mat-error *ngIf="phone.errors?.['required']">
+                                phone number is required
+                            </mat-error>
+                            <mat-error *ngIf="phone.errors?.['pattern']">
+                                enter valid phone number containing 10 digits starting with 7/8/9
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field style="width: 48%;margin-left: 10px;">
+                            <input matInput placeholder="City" type="text" #city="ngModel" name="city"
+                                [(ngModel)]="userDataForOnline.city" required>
+
+                            <mat-error *ngIf="city.errors?.['required']">
+                                City is required
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field style="width: 48%;">
+                            <input matInput placeholder="street" type="text" name="street" #street="ngModel"
+                                [(ngModel)]="userDataForOnline.street" required>
+
+                            <mat-error *ngIf="street.errors?.['required']">
+                                Street is required
+                            </mat-error>
+
+                        </mat-form-field>
+                        <mat-form-field style="width: 48%;margin-left: 10px;">
+                            <input matInput placeholder="state" type="text" name="state" #state="ngModel"
+                                [(ngModel)]="userDataForOnline.state" required>
+
+                            <mat-error *ngIf="state.errors?.['required']">
+                                state is required
+                            </mat-error>
+
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="zipCode" type="text" name="zipCode" #zipCode="ngModel"
+                                [(ngModel)]="userDataForOnline.zipCode" required pattern="[0-9]{5,6}">
+
+                            <mat-error *ngIf="zipCode.errors?.['required']">
+                                zipCode is required
+                            </mat-error>
+                            <mat-error *ngIf="zipCode.errors?.['pattern']">
+                                Zipcode should have 5 or 6 digit numbers
+                            </mat-error>
+
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <h4>Before click on <span style="color: rgb(97, 34, 34);">Place order</span> .Please check your
+                            information..</h4>
+                    </div>
+                    <button MatButton type="submit" color="primary" class="button" mat-raised-button>Place
+                        Order</button>
+                </form>
+
+
+            </mat-tab>
+            <mat-tab label="Store Pick-Up">
+                <h2>Customer information</h2>
+                <div style="margin-top: 20px;">
+                    <mat-form-field style="width: 48%">
+                        <mat-label>Enter First Name</mat-label>
+                        <input matInput [(ngModel)]="userDataForOffline.firstName" name="firstName" type="text"
+                            placeholder="Ex.Thumati">
+                    </mat-form-field>
+                    <mat-form-field style="width: 48%">
+                        <mat-label>Enter Last Name</mat-label>
+                        <input matInput [(ngModel)]="userDataForOffline.lastName" name="lastName" type="text"
+                            placeholder="Ex.Sharath">
+                    </mat-form-field>
+
+                    <mat-form-field style="width: 48% ;">
+                        <input matInput placeholder="Phone Number" type="text" #phone="ngModel" name="phone"
+                            [(ngModel)]="userDataForOffline.phone" required pattern="[987][0-9]{9}">
+                        <mat-error *ngIf="phone.errors?.['required']">
+                            phone number is required
+                        </mat-error>
+                        <mat-error *ngIf="phone.errors?.['pattern']">
+                            enter valid phone number containing 10 digits starting with 7/8/9
+                        </mat-error>
+                    </mat-form-field>
+                    <div>
+                        <button mat-raised-button type="submit" color="primary" (click)="ordernow()">Place
+                            Order</button>
+                    </div>
+
+                    <div class="shop-address">
+                        <h2 style="text-align: center;">Shop Address</h2>
+
+                    </div>
+                </div>
+
+            </mat-tab>
+        </mat-tab-group>
+
+    </div>
+</div>

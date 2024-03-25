@@ -1,0 +1,32 @@
+/* .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  } */
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .main-container{
+    border: solid rgb(107, 191, 212) 1px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px black;
+    width: max-content;
+    padding: 30px 30px 60px;
+    position: absolute;
+    margin: -950px 500px;
+  
+  }
+  .button-class{
+    width: 100%;
+  }
+  .button-tag{
+    color: rgb(109, 146, 197);
+    margin-top: -5px;
+    margin-left: 10px;
+    font-weight: 800;
+  }
+.eye-icon {
+  cursor: pointer;
+}

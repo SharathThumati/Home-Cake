@@ -1,0 +1,21 @@
+
+ 
+  input{
+    margin-bottom: 10px;
+  }
+   
+  form{
+    position: absolute;
+    border:solid 2px rgb(53, 52, 50);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px;
+    width:fit-content;
+    margin:-950px 550px;
+    margin-bottom: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  .expandform{
+    margin-bottom: 10px;
+  }
+

@@ -1,0 +1,813 @@
+{
+  "cakes": [
+    {
+      "name": "Red Velvet Buttercream Cake ",
+      "price": "850",
+      "description": "Indulge in a journey of deliciousness with this amazingly creamy red velvet cake. Made with the finest ingredients, this half-kg red velvet cake is baked to perfection and has a soft and moist texture that will delight your taste buds. The cake is layered with luscious buttercream frosting that is rich and creamy. Beautifully adorned with delicate red velvet crumbs, each slice is a visual delight and a delightful explosion of flavour that will transport you to paradise. You can also gift this cake to your loved ones in Abu Dhabi and make their special events unforgettable.",
+      "rating": "4.3",
+      "productInfo": {
+        "weight": "1.0 kg",
+        "flavour": "Red Velvet",
+        "shape": "Round",
+        "type": "Eggless",
+        "countyOfOrigin": " India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 2
+    },
+    {
+      "name": "Pink Ombre Mini Cake",
+      "price": "565",
+      "description": "Devour this sweet delight and make your day bright. Made with the finest ingredients, this 300 gms mini cake is baked to perfection and has a soft and moist texture that will delight your taste buds. This cake has a beautiful decoration of ombre roses that look too good to be true. Each bite of this cake is a delightful explosion of flavour that will transport you to paradise. You can also gift this delicious cake to your friends and family and make their birthdays, anniversary, and other special events unforgettable.",
+      "rating": "4.5",
+      "productInfo": {
+        "weight": "1.0kg",
+        "flavour": "Butterscotch ,Vanilla ,Pineapple ,Chocolate ,Black Forest ,Red vevlet",
+        "shape": "Round",
+        "type": "Egg",
+        "countyOfOrigin": "India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 3
+    },
+    {
+      "name": "Special Butterscotch Cake ",
+      "price": "595",
+      "description": "Lip-smacking, scrumptious, undeniably leaving you craving for more, this Cake spells 'desire'. Garnished with vivid Chocolate thins, every bite of this will be an explosion of flavors.",
+      "rating": "4.7",
+      "productInfo": {
+        "weight": "1.0 kg",
+        "flavour": "Butterscotch",
+        "shape": " Round",
+        "type": "Eggless",
+        "countyOfOrigin": "India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 4
+    },
+    {
+      "name": "Frosted Fantasy Mini Cake",
+      "price": "445",
+      "description": "Small in size, grand in taste. Made with the finest ingredients, this 300 gms cake is baked to perfection and has a soft and moist texture that will delight your taste buds. The cake is topped with cute-looking edible sunflowers on a spread of lilac-coloured frosting. Each bite of this cake is a delightful explosion of flavour that will transport you to paradise. You can also gift this delicious cake to your friends and family and make their birthdays, anniversary, and other special events unforgettable.",
+      "rating": "4.5",
+      "productInfo": {
+        "weight": "1.0kg",
+        "flavour": "Butterscotch ,Vanilla ,Pineapple ,Black Forest",
+        "shape": "Round",
+        "type": "Eggless",
+        "countyOfOrigin": "India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 5
+    },
+    {
+      "name": "new cake",
+      "price": "307",
+      "description": "Small in size, grand in taste. Made with the finest ingredients, this 300 gms cake is baked to perfection and has a soft and moist texture that will delight your taste buds. The cake is topped with cute-looking edible sunflowers on a spread of lilac-coloured frosting. Each bite of this cake is a delightful explosion of flavour that will transport you to paradise. You can also gift this delicious cake to your friends and family and make their birthdays, anniversary, and other special events unforgettable.",
+      "rating": "4.8",
+      "productInfo": {
+        "weight": "ssss",
+        "flavour": "ssss",
+        "shape": "sss",
+        "type": "ss",
+        "countyOfOrigin": "sss"
+      },
+      "moreInfo": {
+        "point1": "ss",
+        "point2": "ss",
+        "point3": "ss"
+      },
+      "id": 6
+    },
+    {
+      "name": "Delicious and Divine Cake ",
+      "price": "690",
+      "description": "A cake baked with love for the one you love to help your express your love. Send this cake to your special someone and show them how much they mean to you. This delicious cake is made with yummy frosting and decorated with small red hearts.",
+      "rating": "4.4",
+      "productInfo": {
+        "weight": "1.0kg",
+        "flavour": "Chocolate ,Butterscotch ,Pineapple ,Vanilla ,Red Velvet",
+        "shape": "Round",
+        "type": "Egg",
+        "countyOfOrigin": "India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 7
+    },
+    {
+      "name": "Christmas Glee Cake ",
+      "price": "745",
+      "description": "Indulge your taste buds with a tantalizing masterpiece the perfect choice for your Christmas celebrations. This half-kilogram cake is crafted to resemble a delightful snowman wearing a Santa cap. Every bite promises to transport you to a world of sheer ecstasy. To elevate the memorability of your festivities, share this delectable cake with friends and family, ensuring that their celebrations are forever etched in their hearts.",
+      "rating": "4.8",
+      "productInfo": {
+        "weight": "1.0kg",
+        "flavour": "Vanilla ,Pineapple",
+        "shape": "Round",
+        "type": "Eggless",
+        "countyOfOrigin": " India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 8
+    },
+    {
+      "name": "Christmas Tree Cake ",
+      "price": "795",
+      "description": "Take your Christmas celebrations to a whole new level with this half-kg cake. Crafted with the finest ingredients, it's baked to perfection and promises to delight your taste buds. Adorned with edible pearls on top, it features a lovely Christmas tree on the side with a star, boasting a stunning appearance. Every mouthful of this cake is a delightful explosion of flavour, transporting you to paradise with each bite. You can also give this cake to your loved ones, wishing them joyful Christmas celebrations.",
+      "rating": "4.6",
+      "productInfo": {
+        "weight": "1.0kg",
+        "flavour": "Butterscotch ,Vanilla ,Pineapple ,Black Forest",
+        "shape": "Round",
+        "type": "Egg",
+        "countyOfOrigin": "India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 9
+    },
+    {
+      "name": "Santa's Delight Cream Cake ",
+      "price": "745",
+      "description": "Immerse yourself in a heavenly delight with this half-kg cake, curated to enhance your celebrations. This lovely cake is curated to look like Santa, and every bite of this dessert will transport you to a universe of pure delight. To make the celebrations even more memorable, share this delectable cake with your friends and family, ensuring their celebrations are memorable.",
+      "rating": "4.8",
+      "productInfo": {
+        "weight": "1.0kg",
+        "flavour": "Butterscotch ,Vanilla ,Pineapple ,Black Forest",
+        "shape": "Round",
+        "type": "Eggless",
+        "countyOfOrigin": "India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 10
+    },
+    {
+      "name": "Pearls And Petals Mini Cake",
+      "price": "560",
+      "description": "Sweeten your special occasions with a delicious cake. Made with the finest ingredients, this mini cake is baked to perfection and has a soft and moist texture that will delight your taste buds. The cake is decorated with edible golden pearls and blue-coloured decorations on the top and sides. Each bite of this cake is a delightful explosion of flavour that will transport you to paradise. You can also gift this cake to your friends and family and make their birthdays, anniversary, and other special events unforgettable.",
+      "rating": "4.7",
+      "productInfo": {
+        "weight": "1.0kg",
+        "flavour": "Butterscotch ,Vanilla ,Pineapple ,Chocolate ,Black Forest",
+        "shape": "Round",
+        "type": "Egg",
+        "countyOfOrigin": "India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 11
+    },
+    {
+      "name": "Choco Craze Fudge Cake",
+      "price": "745",
+      "description": "Indulge in the deliciousness of this fudge cake and satisfy your sweet cravings. This half-kg cake is generously topped with a luscious, velvety chocolate frosting and adorned with delightful chocolate decorations that will leave you in awe. Crafted with the utmost care and using the finest ingredients, this half-kg masterpiece is baked to perfection, promising to tantalize your taste buds like never before. Whether it's birthdays, anniversaries, or any cherished occasion, this cake is sure to make their celebrations unforgettable and filled with joy.",
+      "rating": "4.6",
+      "productInfo": {
+        "weight": "1.0kg",
+        "flavour": "Chocolate",
+        "shape": " Round",
+        "type": "Egg",
+        "countyOfOrigin": "India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 12
+    },
+    {
+      "name": "Fresh Fruit Almond Cake",
+      "price": "850",
+      "description": "Exotic as it gets, this Half Kg Fresh Fruit Almond Cake takes your taste buds to the state of blissful feelings. Loaded with fresh cream, pieces of almonds and toppings of colourful fruits all through the centre, this Fresh Fruit Almond Cake is simply divine to taste and look at.",
+      "rating": "4.9",
+      "productInfo": {
+        "weight": "1.0kg",
+        "flavour": "Mixed Fruit",
+        "shape": "Round",
+        "type": " Eggless",
+        "countyOfOrigin": " India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 13
+    },
+    {
+      "name": "Delicious Choco Creamy Cake",
+      "price": "745",
+      "description": "No matter how big or small the occasion is, this elegant cake will make sure that the celebrations are massive. All the guests at your party will gladly devour this moist and decadent chocolate cake. It is creamy on the inside and gorgeous on the outside.",
+      "rating": "4.6",
+      "productInfo": {
+        "weight": "1.0kg",
+        "flavour": "Chocolate",
+        "shape": " Round",
+        "type": "Egg",
+        "countyOfOrigin": "India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 14
+    },
+    {
+      "name": "Delicious Chocolate Cake ",
+      "price": "845",
+      "description": "Rejoice the taste of yummilicious Chocolate with Premium frosting, this Delicious Chocolate Cake with Premium Frosting (Half Kg) can turn any event into a sweeter one; share memories over sweet bites with this impeccable dessert option.",
+      "rating": "4.8",
+      "productInfo": {
+        "weight": "1.0kg",
+        "flavour": "Chocolate",
+        "shape": "Round",
+        "type": " Eggless",
+        "countyOfOrigin": "India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 15
+    },
+    {
+      "name": "Personalised Photo Cake",
+      "price": "895",
+      "description": "Here's a delish treat that makes a lip-smacking surprise for a loved one on any occasion. You can get this Delicious Chocolate Cake Personalized with a picture of a fond memory with the receiver on top of the cake to make it unique. We also have an eggless option in the same cake.",
+      "rating": "4.8",
+      "productInfo": {
+        "weight": "1.0kg",
+        "flavour": "Chocolate ,Black Forest ,Truffle",
+        "shape": "Square",
+        "type": "Egg",
+        "countyOfOrigin": " India"
+      },
+      "moreInfo": {
+        "point1": "Delivered product might vary slightly from the image shown.",
+        "point2": "This product is perishable therefore delivery will be attempted only once.",
+        "point3": "The delivery cannot be redirected to any other address."
+      },
+      "id": 16
+    }
+  ],
+  "users": [
+    {
+      "firstName": "thumati",
+      "lastName": "Sharath",
+      "password": "Sharath@123",
+      "confirmPassword": "Sharath@123",
+      "role": "admin",
+      "gender": "male",
+      "age": "25",
+      "email": "sharath961225@gmail.com",
+      "phone": "7032685972",
+      "address": {
+        "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+        "city": "Khammam",
+        "state": "Telangana",
+        "zipCode": "507165"
+      },
+      "id": 1
+    },
+    {
+      "firstName": "ssss",
+      "lastName": "sssss",
+      "password": "aaS@qq111",
+      "confirmPassword": "aaS@qq111",
+      "role": "user",
+      "gender": "Female",
+      "age": "20",
+      "email": "priya@gmail.com",
+      "phone": "7032685972",
+      "address": {
+        "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+        "city": "Khammam",
+        "state": "Telangana",
+        "zipCode": "507165"
+      },
+      "id": 3
+    },
+    {
+      "firstName": "thumati",
+      "lastName": "Sravan",
+      "password": "Sravan@1",
+      "confirmPassword": "Sravan@1",
+      "role": "user",
+      "gender": "Male",
+      "age": "20",
+      "email": "sravan@gmail.com",
+      "phone": "7032685972",
+      "address": {
+        "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+        "city": "Khammam",
+        "state": "ts",
+        "zipCode": "507165"
+      },
+      "id": 4
+    },
+    {
+      "firstName": "vivek",
+      "lastName": "kumar",
+      "password": "Vivek@12",
+      "confirmPassword": "Vivek@12",
+      "role": "user",
+      "gender": "Male",
+      "age": "20",
+      "email": "vivek@gmail.com",
+      "phone": "7032685972",
+      "address": {
+        "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+        "city": "Khammam",
+        "state": "Telangana",
+        "zipCode": "507165"
+      },
+      "id": 5
+    },
+    {
+      "firstName": "Thuluvu",
+      "lastName": "Shiva",
+      "password": "Shiva@123",
+      "confirmPassword": "Shiva@123",
+      "role": "user",
+      "gender": "Male",
+      "age": "25",
+      "email": "shiva@gmail.com",
+      "phone": "9789456123",
+      "address": {
+        "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+        "city": "Khammam",
+        "state": "Telangana",
+        "zipCode": "507165"
+      },
+      "id": 6
+    },
+    {
+      "firstName": "vicky",
+      "lastName": "vishal",
+      "password": "Vicky@12",
+      "confirmPassword": "Vicky@12",
+      "role": "user",
+      "gender": "Male",
+      "age": "22",
+      "email": "vicky@gmail.com",
+      "phone": "8978945612",
+      "address": {
+        "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+        "city": "Khammam",
+        "state": "Telangana",
+        "zipCode": "507165"
+      },
+      "id": 7
+    },
+    {
+      "firstName": "modepalli",
+      "lastName": "Karthik",
+      "password": "Karthik@12",
+      "confirmPassword": "Karthik@12",
+      "role": "user",
+      "gender": "Male",
+      "age": "20",
+      "email": "karthik@gmail.com",
+      "phone": "7894561237",
+      "address": {
+        "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+        "city": "Khammam",
+        "state": "Telangana",
+        "zipCode": "507165"
+      },
+      "id": 8
+    },
+    {
+      "firstName": "thumalla",
+      "lastName": "venky",
+      "password": "Venky@12",
+      "confirmPassword": "Venky@12",
+      "role": "user",
+      "gender": "Male",
+      "age": "20",
+      "email": "venky@gmail.com",
+      "phone": "7023589567",
+      "address": {
+        "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+        "city": "Khammam",
+        "state": "Telangana",
+        "zipCode": "507165"
+      },
+      "id": 9
+    },
+    {
+      "firstName": "arjun",
+      "lastName": "kumar",
+      "password": "Arjun@123",
+      "confirmPassword": "Arjun@123",
+      "role": "user",
+      "gender": "Male",
+      "age": "20",
+      "email": "arjun@gmail.com",
+      "phone": "7895878962",
+      "address": {
+        "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+        "city": "Khammam",
+        "state": "Telangana",
+        "zipCode": "507165"
+      },
+      "id": 10
+    }
+  ],
+  "orders": [
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": "565",
+      "itemName": "Pink Ombre Mini Cake",
+      "date": "2023-12-28T18:30:00.000Z",
+      "messageOnCake": "Happy marriage life",
+      "deliveryType": "Door-Delivery",
+      "quantity": 1,
+      "id": 1
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": "845",
+      "itemName": "Delicious Chocolate Cake ",
+      "date": "2023-12-29T18:30:00.000Z",
+      "messageOnCake": "married",
+      "deliveryType": "Door-Delivery",
+      "quantity": 1,
+      "id": 2
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": "690",
+      "itemName": "Delicious and Divine Cake ",
+      "date": "2023-12-29T18:30:00.000Z",
+      "messageOnCake": "Happy marriage life",
+      "deliveryType": "Door-Delivery",
+      "quantity": 1,
+      "id": 3
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "totalAmount": "560",
+      "itemName": "Pearls And Petals Mini Cake",
+      "date": "2023-12-29T18:30:00.000Z",
+      "messageOnCake": "married",
+      "deliveryType": "Store-pickUp",
+      "quantity": 1,
+      "id": 4
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "totalAmount": "850",
+      "itemName": "Luscious Ganache Nutella Cake ",
+      "date": "2023-12-29T18:30:00.000Z",
+      "messageOnCake": "Happy marriage life",
+      "deliveryType": "Store-pickUp",
+      "quantity": 1,
+      "id": 5
+    },
+    {
+      "email": "vicky@gmail.com",
+      "firstName": "vicky",
+      "lastName": "vishal",
+      "phone": "7542589784",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": "745",
+      "itemName": "Christmas Glee Cake (500 gm)",
+      "date": "2023-12-29T18:30:00.000Z",
+      "messageOnCake": "Happy Birthday",
+      "deliveryType": "Door-Delivery",
+      "quantity": 1,
+      "id": 6
+    },
+    {
+      "email": "shiva@gmail.com",
+      "firstName": "tuluku",
+      "lastName": "shiva",
+      "phone": "7032685972",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": "895",
+      "itemName": "Personalised Photo Cake",
+      "date": "2023-12-29T18:30:00.000Z",
+      "messageOnCake": "merry christmas",
+      "deliveryType": "Door-Delivery",
+      "quantity": 1,
+      "id": 7
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "sharath",
+      "lastName": "kumar",
+      "phone": "7894561237",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": "745",
+      "itemName": "Christmas Glee Cake (500 gm)",
+      "date": "2023-12-24T18:30:00.000Z",
+      "messageOnCake": "happy birthday",
+      "deliveryType": "Door-Delivery",
+      "quantity": 1,
+      "id": 8
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "sharath",
+      "lastName": "kumar",
+      "phone": "7895874589",
+      "totalAmount": "595",
+      "itemName": "Special Butterscotch Cake ",
+      "date": "2023-12-28T18:30:00.000Z",
+      "messageOnCake": "Happy marriage life",
+      "deliveryType": "Store-pickUp",
+      "quantity": 1,
+      "id": 9
+    },
+    {
+      "email": "arjun@gmail.com",
+      "firstName": "arjun",
+      "lastName": "kumar",
+      "phone": "7032685972",
+      "totalAmount": "595",
+      "itemName": "Special Butterscotch Cake ",
+      "date": "2023-12-22T18:30:00.000Z",
+      "messageOnCake": "happy",
+      "deliveryType": "Store-pickUp",
+      "quantity": 1,
+      "id": 10
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": "795",
+      "itemName": "Christmas Tree Cake (500 gm)",
+      "date": "2023-12-26T18:30:00.000Z",
+      "messageOnCake": "Happy marriage life",
+      "deliveryType": "Door-Delivery",
+      "quantity": 1,
+      "id": 11
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "",
+      "lastName": "",
+      "phone": "",
+      "street": "",
+      "city": "",
+      "state": "",
+      "zipCode": "",
+      "totalAmount": "795",
+      "itemName": "Christmas Tree Cake (500 gm)",
+      "date": "2023-12-29T18:30:00.000Z",
+      "messageOnCake": "",
+      "deliveryType": "Door-Delivery",
+      "quantity": 1,
+      "id": 12
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "aditi",
+      "lastName": "aditi",
+      "phone": "7777777777",
+      "totalAmount": "755",
+      "itemName": "Red Velvet Buttercream Cake ",
+      "date": "2023-12-29T18:30:00.000Z",
+      "messageOnCake": "Happy marriage life",
+      "deliveryType": "Store-pickUp",
+      "quantity": 1,
+      "id": 13
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "vemula",
+      "lastName": "bala",
+      "phone": "9032685972",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "50719",
+      "totalAmount": "755",
+      "itemName": "Red Velvet Buttercream Cake ",
+      "date": "2023-12-31T18:30:00.000Z",
+      "messageOnCake": "Happy New Year",
+      "deliveryType": "Door-Delivery",
+      "quantity": 1,
+      "id": 14
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": "745",
+      "itemName": "Christmas Glee Cake (500 gm)",
+      "date": "2024-02-28T18:30:00.000Z",
+      "messageOnCake": "Happy marriage life",
+      "deliveryType": "Door-Delivery",
+      "id": 84
+    },
+    {
+      "weight": 0,
+      "totalAmount": 0,
+      "NoOfItems": 0,
+      "id": 85
+    },
+    {
+      "email": "shiva@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": 4237.5,
+      "itemName": "Pink Ombre Mini Cake",
+      "date": "2024-02-21T18:30:00.000Z",
+      "weight": 1.5,
+      "NoOfItems": 5,
+      "messageOnCake": "Happy marriage life",
+      "deliveryType": "Door-Delivery",
+      "id": 86
+    },
+    {
+      "email": "shiva@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "totalAmount": 4140,
+      "itemName": "Delicious and Divine Cake ",
+      "date": "2024-02-23T18:30:00.000Z",
+      "weight": 1,
+      "NoOfItems": 6,
+      "messageOnCake": "Happy marriage life",
+      "deliveryType": "Store-pickUp",
+      "id": 87
+    },
+    {
+      "email": "shiva@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": 1487.5,
+      "itemName": "Special Butterscotch Cake ",
+      "date": "2024-02-28T18:30:00.000Z",
+      "weight": 2.5,
+      "NoOfItems": 1,
+      "messageOnCake": "Happy marriage life",
+      "deliveryType": "Door-Delivery",
+      "id": 88
+    },
+    {
+      "email": "shiva@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": 4462.5,
+      "itemName": "Special Butterscotch Cake ",
+      "date": "",
+      "weight": 2.5,
+      "NoOfItems": 3,
+      "messageOnCake": "",
+      "deliveryType": "Door-Delivery",
+      "id": 89
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "totalAmount": 10430,
+      "itemName": "Christmas Glee Cake ",
+      "date": "",
+      "weight": 2,
+      "NoOfItems": 7,
+      "messageOnCake": "",
+      "deliveryType": "Store-pickUp",
+      "id": 90
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "asd",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": 18625,
+      "itemName": "Christmas Glee Cake ",
+      "date": "",
+      "weight": 2.5,
+      "NoOfItems": 10,
+      "messageOnCake": "",
+      "deliveryType": "Door-Delivery",
+      "id": 91
+    },
+    {
+      "email": "sravan@gmail.com",
+      "firstName": "sssssss",
+      "lastName": "ass",
+      "phone": "7032685972",
+      "street": "H.No 6-52/B Gandhi Chowk , Wyra (Vill)",
+      "city": "Khammam",
+      "state": "Telangana",
+      "zipCode": "507165",
+      "totalAmount": 10412.5,
+      "itemName": "Special Butterscotch Cake ",
+      "date": "2024-03-29T18:30:00.000Z",
+      "weight": 2.5,
+      "NoOfItems": 7,
+      "messageOnCake": "Happy marriage life",
+      "deliveryType": "Door-Delivery",
+      "id": 92
+    }
+  ]
+}

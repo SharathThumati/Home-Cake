@@ -1,0 +1,148 @@
+<div><img style="width: 100%;" src="../../assets/backgroundd.jpeg" alt="">
+
+    <div class="form">
+        <h1 class="header" style="font-weight:500;">Registration Form</h1>
+
+        <form [formGroup]="registerForm" class="example-form">
+            <div>
+                <mat-form-field class="firstname" style="width: 49%;" appearance="fill">
+                    <mat-label>First Name</mat-label>
+                    <input placeholder="Surname" matInput formControlName="firstName">
+
+                    <mat-error class="error" *ngIf="firstName?.errors?.['required']">
+                        First Name is required
+                    </mat-error>
+                    <div>
+                        <mat-error class="error" *ngIf="firstName?.errors?.['pattern']">
+                            characters should be alphabates
+                        </mat-error>
+                        <mat-error class="error" *ngIf="firstName?.errors?.['minlength']">
+                            Minimum 2 characters required
+                        </mat-error>
+                    </div>
+                </mat-form-field>
+
+                <mat-form-field class="lastname" style="width: 49%;" appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName">
+                    <mat-error class="error" *ngIf="lastName?.errors?.['pattern']">
+                        characters should be alphabates
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field class="email" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input class="email-input" matInput placeholder="Ex.sharath@gmail.com" formControlName="email"
+                        email>
+                    <mat-error *ngIf="email?.errors?.['required']">Email is required </mat-error>
+                    <mat-error
+                        *ngIf="registerForm.get('email')?.hasError('pattern') && registerForm.get('email')?.touched">
+                        Enter valid email address
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <input type="hidden" formControlName="role">
+            <div>
+                <mat-form-field class="password" style="width: 49%;" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" placeholder="Ex.S@1abcdef">
+                    <mat-error *ngIf="password?.errors?.['required']">Password is required </mat-error>
+                    <mat-error *ngIf="password?.errors?.['pattern']">Password must contain the specified
+                        pattern</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="confirmpassword" style="width: 49%;" appearance="fill">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput formControlName="confirmPassword" placeholder="Ex.S@1abcdef">
+                    <mat-error *ngIf="confirmPassword?.errors?.['required']">Confirm Password is required </mat-error>
+                    <div>
+                        <mat-error *ngIf="confirmPassword?.errors?.['pattern']"> Confirm Password must contain the
+                            specified pattern</mat-error>
+                        <mat-error *ngIf="registerForm.errors?.['passwordMismatch']">Password and Confirm Password do
+                            not match</mat-error>
+                    </div>
+
+                </mat-form-field>
+
+            </div>
+
+            <div class="radio-button" style="background-color: aliceblue; margin-bottom: 10px;border-radius: 5px;">
+                <p class="gender" style="font-weight: 500;">Gender</p>
+                <mat-radio-group aria-label="Select an option" formControlName="gender">
+                    <mat-radio-button value="Male">Male</mat-radio-button>
+                    <mat-radio-button value="Female">Female</mat-radio-button>
+                    <mat-radio-button value="Others">Others</mat-radio-button>
+                    <mat-error class="error" *ngIf="gender?.touched && gender?.errors?.['required']">
+                        Gender is required
+                    </mat-error>
+                </mat-radio-group>
+
+            </div>
+
+            <div>
+                <mat-form-field class="age" style="width: 49%;" appearance="fill">
+                    <mat-label>Age</mat-label>
+                    <input matInput formControlName="age">
+                    <mat-error *ngIf="registerForm.controls.age.errors?.['required']">Age is required</mat-error>
+                    <mat-error *ngIf="registerForm.controls.age.errors?.['pattern']">Age should be digit</mat-error>
+                    <mat-error *ngIf="registerForm.controls.age.errors?.['min']">Age should be more than
+                        zero.</mat-error>
+                </mat-form-field>
+                <mat-form-field class="phonenumber" style="width: 49%;" appearance="fill">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput formControlName="phone">
+                    <mat-error *ngIf="registerForm.controls.phone.errors?.['pattern']"> Invalid phone number
+                        format</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div formGroupName="address" style="margin-bottom: 10px;">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title style="font-weight: 500;">
+                            Address
+                        </mat-panel-title>
+
+                    </mat-expansion-panel-header>
+
+                    <mat-form-field class="street" appearance="fill" style="width: 49%;">
+                        <mat-label>Street</mat-label>
+                        <input matInput formControlName="street">
+                    </mat-form-field>
+
+                    <mat-form-field class="city" appearance="fill" style="width: 49%;">
+                        <mat-label>City</mat-label>
+                        <input matInput formControlName="city">
+                    </mat-form-field>
+
+                    <mat-form-field class="state" appearance="fill" style="width: 49%;">
+                        <mat-label>State</mat-label>
+                        <input matInput formControlName="state">
+                    </mat-form-field>
+
+                    <mat-form-field class="zipcode" style="width: 49%;">
+                        <mat-label>Zip Code</mat-label>
+                        <input matInput formControlName="zipCode">
+                        <mat-error *ngIf="registerForm.get('address.zipCode')?.hasError('pattern')">Zip code should have
+                            5 or 6 digit numbers</mat-error>
+                    </mat-form-field>
+                </mat-expansion-panel>
+            </div>
+
+
+
+            <div class="example-button-row">
+                <button mat-raised-button color="accent" type="reset">Reset</button>
+                <button [disabled]="!registerForm.valid" mat-raised-button color="primary" type="submit"
+                    (click)="saveUser()">Submit</button>
+
+            </div>
+            <div style="font-size: large;  background-color: rgb(252, 252, 252);border-radius: 5px;margin-top: 10px;">
+                If you have an account <button mat-button color="primary" (click)="login()">Click</button> here
+            </div>
+
+        </form>
+    </div>
+</div>

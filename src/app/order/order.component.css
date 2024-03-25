@@ -1,0 +1,19 @@
+.inputaDateAndMessage{
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+.maindiv{
+    display: grid;
+    grid-template-columns: 45% 53%;
+    gap: 2%;
+    margin: 10px;
+}
+.shop-address{
+    border: solid 1px black;
+    padding: 10px;
+    margin: 10px;
+}
+form{
+    padding: 10px;
+}
