@@ -16,6 +16,7 @@
                     <h4>weight:{{mycake.productInfo?.weight}}</h4>
                 </div> -->
                 <div><h2>Cake Name:{{mycake.name}}</h2>
+                    <h3>Type:{{mycake.productInfo?.type}}</h3>
                     Weight:
                     <div>
                         <mat-radio-group aria-label="Select an option" [(ngModel)]="orderData.weight">
@@ -27,13 +28,7 @@
                         </mat-radio-group>
                     </div>
 
-                    <!-- <b>Weight :</b><br>
-                <div style="display: flex;margin-right: 8px;">
-                  <button class="kgbutton" (click)="updateQuantity(1)">1kg</button>
-                  <button class="kgbutton" (click)="updateQuantity(1.5)">1.5kg</button>
-                  <button class="kgbutton" (click)="updateQuantity(3)">3kg</button>
-                  <button class="kgbutton" (click)="updateQuantity(2)">2kg</button>
-                </div> -->
+                
                     <div style="margin-top: 10px;">Number Of Cakes:
 
                         <input type="number" min="1" max="10" value="1" style="width: 20%;"
@@ -42,12 +37,7 @@
 
                     </div>
 
-                    <!-- <mat-form-field>
-               
-                  <input matInput type="text" [(ngModel)]="userEnteredQuantity" name="userEnteredQuantity"
-                    (change)="calculateTotalPrice()" style="width: 80px;">
-          
-                </mat-form-field> -->
+                   
                     <h3 style="margin-top: 30px;">Overall Weight: <span
                             style="color: red;">{{selectedQuantity}}kg</span></h3>
                     <div>

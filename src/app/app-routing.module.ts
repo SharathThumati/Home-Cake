@@ -13,6 +13,8 @@ import { ClosingGuard, ClosingGuard2 } from './services/close.guard';
 import { OrderComponent } from './order/order.component';
 import { UserGuard } from './services/user.guard';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
+import { CartComponent } from './cart/cart.component';
+import { AdminViewComponent } from './admin-view/admin-view.component';
 
 
 const routes: Routes = [
@@ -32,8 +34,17 @@ const routes: Routes = [
     
   },
   {
+    path:"adminView",
+    component:AdminViewComponent
+    
+  },
+  {
     path:"viewallcakes",
     redirectTo:""
+  },
+  {
+    path:"cart", 
+    component:CartComponent
   },
   {
     path:"viewDetails/:id", 

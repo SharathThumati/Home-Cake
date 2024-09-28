@@ -40,7 +40,8 @@ export class RegisterFormComponent implements OnInit {
     })
   }, { validators: this.passwordCheck })
 
-  passwordCheck(ac: AbstractControl) {
+  passwordCheck(ac: AbstractControl) 
+  {
     let pass = ac.get('password')?.value;
     let conpass = ac.get('confirmPassword')?.value;
 

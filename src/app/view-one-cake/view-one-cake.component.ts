@@ -9,6 +9,7 @@ import { LoginService } from '../services/login.service';
 import { OrderService } from '../services/order.service';
 import { SnackbarService } from '../services/snackbar.service';
 import { Order } from '../model/order';
+import { CartService } from '../services/cart.service';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class ViewOneCakeComponent implements OnInit {
   mycake: cake = {};
   id: any | null;
 
-
+   mail:any;
   constructor(
     private rs: ActivatedRoute,
     private cakeserve: CakeService,
@@ -29,6 +30,7 @@ export class ViewOneCakeComponent implements OnInit {
 
     public loginservice: LoginService,
     private orderservice: OrderService,
+    private cartService:CartService
 
   ) { }
 
@@ -38,6 +40,7 @@ export class ViewOneCakeComponent implements OnInit {
       this.id = stdid;
       this.getOneCake(stdid);
     });
+    this.mail=this.loginservice.userEmail;
   }
  
 
@@ -53,21 +56,29 @@ export class ViewOneCakeComponent implements OnInit {
   }
 
   deleteCake() {
-    this.cakeserve.deleteCake(this.id).subscribe((data) => {
-      this.route.navigateByUrl('viewallcakes');
-      this.snackbar.openScakBar('Item Deleted', 'Successfully')
-    });
+    if(confirm("Do you what to delete item")){
+      this.cakeserve.deleteCake(this.id).subscribe((data) => {
+        this.route.navigateByUrl('viewallcakes');
+        this.snackbar.openScakBar('Item Deleted', 'Successfully')
+      });
+    }
+   
   }
 
 
   order() {
-    //  this.orderservice.submitOrder(this.orderData).subscribe((data) => {
-    //   this.snackbar.openScakBar('Congrats!!You have ordered Successfully!!', 'success')
-    //   console.log(data);
-    // });
     this.route.navigate([`OrderComponent/${this.id}`])
   };
   
 
+  Cart(){
+    this.cartService.addToCart({email: this.mail,...this.mycake}).subscribe((data)=>console.log(data));
+    // console.log(this.cartService.getCartItems());
+    this.snackbar.openScakBar('Added to Cart', 'Success');
+  }
+  
+  goToCart() {
+    this.route.navigate(['cart']);
+  }
 }
 

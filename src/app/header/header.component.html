@@ -15,24 +15,31 @@
       </button>
 
       <span class="homecakes">Home<mat-icon>cake</mat-icon>Cakes</span>
-
-      <button style="margin-left: 80%;" mat-icon-button class="more-button" [matMenuTriggerFor]="menu"
-        aria-label="Toggle menu" title="menu">
-        <mat-icon>account_circle</mat-icon>
-        <div style="font-size: 15px;margin-top:-15px;margin-left: -25px;"
-          *ngIf="loginservice.isAdminLoggedIn||loginservice.isUserLoggedIn">Hi..{{loginservice.userLastName}}</div>
-      </button>
-
-      <mat-menu #menu="matMenu" xPosition="before">
-        <a mat-menu-item *ngIf="!(loginservice.isAdminLoggedIn||loginservice.isUserLoggedIn)"
-          routerLink="login">Login</a>
-        <a mat-menu-item routerLink="viewallcakes">Home</a>
-        <a mat-menu-item *ngIf="loginservice.isAdminLoggedIn&&!loginservice.isUserLoggedIn" routerLink="addCake">Add</a>
-        <a mat-menu-item *ngIf="loginservice.isAdminLoggedIn||loginservice.isUserLoggedIn" (click)="logout()">Logout</a>
-        <a mat-menu-item *ngIf="!loginservice.isAdminLoggedIn && loginservice.isUserLoggedIn"
-          routerLink="OrderSummaryComponent/:id">View all My orders</a>
-
-      </mat-menu>
+      <span style="margin-left: 80%">
+        <button class="button"  style="margin-bottom: 1px;margin-right: 5px;" title="Cart"
+        (click)="goToCart()" *ngIf="!loginservice.isAdminLoggedIn && loginservice.isUserLoggedIn">
+        <mat-icon class="icon">shopping_cart</mat-icon></button>
+        <button style="margin-left: 10px;" mat-icon-button class="more-button" [matMenuTriggerFor]="menu"
+          aria-label="Toggle menu" title="menu">
+          <mat-icon >account_circle</mat-icon>
+          <div style="font-size: 15px;margin-top:-15px;margin-left: -25px;"
+            *ngIf="loginservice.isAdminLoggedIn||loginservice.isUserLoggedIn">Hi..{{loginservice.userLastName}}</div>
+        </button>
+  
+        <mat-menu #menu="matMenu" xPosition="before">
+          <a mat-menu-item *ngIf="!(loginservice.isAdminLoggedIn||loginservice.isUserLoggedIn)"
+            routerLink="login">Login</a>
+          <a mat-menu-item routerLink="viewallcakes">Home</a>
+          <a mat-menu-item *ngIf="loginservice.isAdminLoggedIn&&!loginservice.isUserLoggedIn" routerLink="addCake">Add</a>
+          <a mat-menu-item *ngIf="loginservice.isAdminLoggedIn||loginservice.isUserLoggedIn" (click)="logout()">Logout</a>
+          <a mat-menu-item *ngIf="!loginservice.isAdminLoggedIn && loginservice.isUserLoggedIn"
+            routerLink="OrderSummaryComponent/:id">View all My orders</a>
+            <a mat-menu-item *ngIf="loginservice.isAdminLoggedIn && !loginservice.isUserLoggedIn"
+            routerLink="adminView">View all orders</a>
+  
+        </mat-menu>
+      </span>
+      
 
     </mat-toolbar>
     <router-outlet></router-outlet>

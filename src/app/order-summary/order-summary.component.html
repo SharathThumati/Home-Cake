@@ -1,25 +1,69 @@
+<h1 style="margin: 10px 10px; color: #5e036c;">My Orders</h1>
+<!-- <div>
+    <mat-card-title style="font-weight: bold; color: #3f51b5;">Order Details</mat-card-title>
+    <mat-grid-list cols="4" rowHeight="450px" gutterSize="20px">
+      <mat-grid-tile>
+        <mat-card style="background-color: #f5f5f5; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+          <mat-card-header>
+            
+          </mat-card-header>
+          <mat-card-content> -->
+            <!-- <p><strong>Name:</strong> {{order.firstName}} {{order.lastName}}</p>
+            <p><strong>Phone:</strong> {{order.phone}}</p>
+            <p><strong>Cake Name:</strong> {{order.itemName}}</p>
+            <p><strong>Number Of Cakes:</strong> {{order.NoOfItems}}</p>
+            <p><strong>Cake Price:</strong> ₹{{order.totalAmount}}</p>
+            <p><strong>Weight:</strong> {{order.weight}}kgs</p>
+            <p><strong>Delivery Date:</strong> {{order.date}}</p>
+            <p><strong>Delivery Type:</strong> {{order.deliveryType}}</p>
+            <p><strong>Message on Cake:</strong> {{order.messageOnCake}}</p>
+            <div *ngIf="order.deliveryType === 'Door-Delivery'" style="margin-top: 10px;">
+              <p><strong>Street:</strong> {{order.street}}</p>
+              <p><strong>City:</strong> {{order.city}}</p>
+              <p><strong>State:</strong> {{order.state}}</p>
+              <p><strong>ZipCode:</strong> {{order.zipCode}}</p>
+            </div> -->
 
-<div>
-    <mat-grid-list cols="4" rowHeight="450px">
-        <mat-grid-tile *ngFor="let order of orderdata">
-            <mat-card>
-                <mat-card-content >
-                    <p>Name : {{order.firstName}}.{{order.lastName}}</p>
-                    <p>Phone : {{order.phone}}</p>
-                    <p>Cake Name : {{order.itemName}}</p>
-                    <p>Number Of Cakes : {{order.NoOfItems}}</p>
-                    <p>Cake Price : ₹{{order.totalAmount}}</p>
-                    <p>Weight:{{order.weight}}kgs</p>
-                    <p>Delivery Date : {{order.date}}</p>
-                    <p>Delivery Type : {{order.deliveryType}}</p>
-                    <p>Message on Cake : {{order.messageOnCake}}</p>
-                    <p *ngIf="order.deliveryType=='Door-Delivery'">street : {{order.street}}</p>
-                    <p *ngIf="order.deliveryType=='Door-Delivery'">city : {{order.street}}</p>
-                    <p *ngIf="order.deliveryType=='Door-Delivery'">state : {{order.state}}</p>
-                    <p *ngIf="order.deliveryType=='Door-Delivery'">zipCode : {{order.zipCode}}</p>
-                </mat-card-content>
-            </mat-card>
-        </mat-grid-tile>
+
+            <table>
+              <thead>
+                <tr >
+                  <th>Item</th>
+                
+                  <th >Total Price</th>
+                  <th >Delivary Type</th>
+                  <th >Delivary Date</th>
+            
+                </tr>
+              </thead>
+              <tbody *ngFor="let item of orderdata">
+                <tr >
+                  <td>
+                     <div style="display: flex;align-items: center;"> 
+                      <img src="../../assets/{{item.cakeId}}.jpeg" width="300px"   alt="">
+                      <div style="margin-left: 30px;">
+                     <h2> {{item.itemName | titlecase}}</h2>
+                     <p>   <span>/ {{item.weight}} Kg</span> <span> / </span></p>
+                 
+                      <p>No of Items :{{item.NoOfItems}} </p>
+                      </div>
+                     </div>
+                   
+                    </td>
+                  <td><h2> ₹{{item.totalAmount}}</h2></td>
+                  <td><h2>{{item.deliveryType}}</h2></td>
+                  <td><h2>{{item.date |date}}</h2></td>
+                  
+                </tr>
+              </tbody>
+          </table>
+             
+
+
+          <!-- </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
     </mat-grid-list>
-</div>
-<button mat-raised-button style="margin: 20px 500px;" color="primary" (click)="backtoHome()">back to home</button>
+  </div> -->
+  <button mat-raised-button style="margin: 20px 500px; background-color: #3f51b5; color: white;" color="primary" (click)="backtoHome()">Back to Home</button>
+  

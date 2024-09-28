@@ -22,3 +22,12 @@
   padding: 7px;
   box-shadow: 1px 1px 3px;
 }
+.icon{
+  color: white;
+  border: none;
+}
+.button{
+  border: none;
+  background: none;
+ 
+}

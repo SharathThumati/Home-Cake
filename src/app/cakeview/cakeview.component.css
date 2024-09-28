@@ -96,3 +96,15 @@ mat-grid-list:hover {
 
   cursor: pointer;
 }
+
+/* Zoom in/out effect on hover for the entire card */
+.mat-grid-tile:hover mat-card {
+  transform: scale(1.05);  /* Zoom in by 5% */
+  transition: transform 0.3s ease-in-out;  /* Smooth transition */
+}
+
+/* Optional: Restore original size when not hovered */
+.mat-grid-tile mat-card {
+  transition: transform 0.3s ease-in-out;
+}
+

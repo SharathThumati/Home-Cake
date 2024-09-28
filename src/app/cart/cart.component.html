@@ -1,0 +1,136 @@
+<div *ngIf="cartItems.length > 0; else emptyCart" class="cart-page-container">
+  <!-- Left Side: Cart Items -->
+  <div class="cart-items">
+    <h3 class="cart-title">Your Cart</h3>
+    <ul class="cart-list">
+      <li *ngFor="let cake of cartItems; let i = index" class="cart-item">
+        <!-- Cake Image -->
+        <div class="cart-item-img">
+          <img src="../../assets/{{cake.id}}.jpeg" width="150px" alt="{{cake.name}}">
+          <div class="quantity-selection">
+         
+            <button class="btn-left" (click)="decreaseQuantity(cake)" [disabled]="cake.selectedQuantity <= 1">-</button>
+            <input style="width:25px;" [(ngModel)]="cake.selectedQuantity" min="1" max="10" (change)="calculateTotalPrice()">
+            <button class="btn-right" (click)="increaseQuantity(cake)" [disabled]="cake.selectedQuantity >= 10">+</button>
+        </div>
+        </div>
+
+        <!-- Cake Details -->
+        <div class="cart-item-details">
+          <h2>{{cake.name}} : {{cake.productInfo.type}}</h2>
+          <hr>
+   
+          <h3>Price: <span class="price" > ₹{{ cake.price * cake.selectedWeight * cake.selectedQuantity }}</span> </h3>
+
+          <!-- Weight Selection -->
+          <div class="weight-selection">
+            Weight:
+            <mat-radio-group aria-label="Select weight" [(ngModel)]="cake.selectedWeight" (change)="calculateTotalPrice()">
+              <mat-radio-button *ngFor="let weight of availableWeights" [value]="weight">{{ weight }} kg</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        
+
+          <div class="input-group input-group-sm mb-3" style="margin-top: 5px;">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Message on Cake</span>
+            <input [(ngModel)]="cake.messageOnCake" name="messageOnCake" type="text" placeholder="Ex.Happy Birthday" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          </div>
+
+        
+        
+          <!-- Remove Item Button -->
+          <button class="remove-btn" (click)="removeFromCart(cake.id)">Remove</button>
+        </div>
+      </li>
+    </ul>
+    
+  <div class="input-group input-group-sm mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Order Date</span>
+    <input [(ngModel)]="doorDeliveryOrder.date" [min]="minDate" [matDatepicker]="picker" placeholder="Order Date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </div>
+
+    <!-- Display Total Price -->
+    <div class="total-price-container">
+      <h2>Total Price ({{ cartItems.length }} items): <span class="price">₹{{ totalPrice }}</span></h2>
+    </div>
+   
+
+  </div>
+
+  <!-- Right Side: Delivery Method and Address Form -->
+  <div class="order-form">
+    <h2>Delivery Information</h2>
+
+    <!-- Delivery Method Selection -->
+    <div class="delivery-method">
+      <mat-radio-group [(ngModel)]="deliveryMethod" >
+        <mat-radio-button value="Door-Delivery">Door Delivery</mat-radio-button>
+        <mat-radio-button value="Store-Pickup">Store-Pickup</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <!-- Address Form (Visible for Door Delivery) -->
+    <div *ngIf="deliveryMethod === 'Door-Delivery'">
+      <h3>Shipping Address</h3>
+      <form (ngSubmit)="submitOrderForm()">
+        <mat-form-field style="width: 48%;">
+          <input matInput placeholder="First Name" [(ngModel)]="doorDeliveryOrder.firstName" name="firstName" required>
+        </mat-form-field>
+        <mat-form-field style="width: 48%; margin-left: 10px;">
+          <input matInput placeholder="Last Name" [(ngModel)]="doorDeliveryOrder.lastName" name="lastName" required>
+        </mat-form-field>
+        <mat-form-field style="width: 48%;">
+          <input matInput placeholder="Phone Number" [(ngModel)]="doorDeliveryOrder.phone" name="phone" required pattern="[987][0-9]{9}">
+        </mat-form-field>
+        <mat-form-field style="width: 48%; margin-left: 10px;">
+          <input matInput placeholder="Street" [(ngModel)]="doorDeliveryOrder.street" name="street" required>
+        </mat-form-field>
+        <mat-form-field style="width: 48%;">
+          <input matInput placeholder="City" [(ngModel)]="doorDeliveryOrder.city" name="city" required>
+        </mat-form-field>
+        <mat-form-field style="width: 48%; margin-left: 10px;">
+          <input matInput placeholder="State" [(ngModel)]="doorDeliveryOrder.state" name="state" required>
+        </mat-form-field>
+        <mat-form-field style="width: 48%;">
+          <input matInput placeholder="Zip Code" [(ngModel)]="doorDeliveryOrder.zipCode" name="zipCode" required pattern="[0-9]{5,6}">
+        </mat-form-field>
+<div>
+  <button mat-raised-button color="primary" type="submit" class="btn">Place Order</button>
+</div>
+        <!-- Place Order Button -->
+       
+      </form>
+    </div>
+
+    <!-- Pickup Information -->
+    <div *ngIf="deliveryMethod === 'Store-Pickup'">
+      <h3>Pickup Information</h3>
+      <mat-form-field style="width: 48%">
+        <mat-label>Enter First Name</mat-label>
+        <input matInput [(ngModel)]="storePickUpOrder.firstName" name="firstName" type="text" placeholder="Ex.Thumati">
+      </mat-form-field>
+      <mat-form-field style="width: 48%">
+        <mat-label>Enter Last Name</mat-label>
+        <input matInput [(ngModel)]="storePickUpOrder.lastName" name="lastName" type="text" placeholder="Ex.Sharath">
+      </mat-form-field>
+      <mat-form-field style="width: 48%;">
+        <input matInput placeholder="Phone Number" type="text" #phone="ngModel" name="phone"
+               [(ngModel)]="storePickUpOrder.phone" required pattern="[987][0-9]{9}">
+        <mat-error *ngIf="phone.errors?.['required']">Phone number is required</mat-error>
+        <mat-error *ngIf="phone.errors?.['pattern']">Enter valid phone number (10 digits starting with 7/8/9)</mat-error>
+      </mat-form-field>
+<div>
+  <button mat-raised-button color="primary" (click)="submitOrderForm()" class="btn">Confirm Pickup</button>
+</div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Empty Cart Message -->
+<ng-template #emptyCart>
+  <h2>Your Cart is Empty</h2>
+</ng-template>
+

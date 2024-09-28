@@ -19,7 +19,7 @@ export class OrderComponent implements OnInit {
   mycake: cake = {}
   orderdata: Order={}
   id: any | null;
-  
+ 
   orderData:Order={}
   selectedQuantity = 0;
   userEnteredQuantity: number = 1;
@@ -50,6 +50,8 @@ export class OrderComponent implements OnInit {
   constructor(private rs: ActivatedRoute,
     private cakeserve: CakeService,
     private route: Router,
+    private userService:UserService,
+    
     public loginservice: LoginService,
     private userservice: UserService,
     private orderservice: OrderService,
@@ -62,6 +64,7 @@ export class OrderComponent implements OnInit {
       this.getOneCake(stdid);
       this.getUser();
       this.calculateTotalPrice();
+      this.userData();
     })
   }
   updateQuantity(quantity: number) {
@@ -111,16 +114,17 @@ export class OrderComponent implements OnInit {
       weight:this.selectedQuantity,
       NoOfItems:this.userEnteredQuantity,
       messageOnCake: this.messageOnCake,
-      deliveryType: "Door-Delivery"
-      
+      deliveryType: "Door-Delivery",
+      cakeId:this.id,
+      type:this.mycake.productInfo?.type
 
     }
     this.orderservice.submitOrder(this.doorDeliveryOrder).subscribe((data) => {
       this.snackbar.openScakBar('Congrats!!You have ordered Successfully!!', 'success')
 
     })
-   
-    this.route.navigate([`OrderSummaryComponent/${this.id}`])
+    this.route.navigate([`viewallcakes`])
+    // this.route.navigate([`OrderSummaryComponent/${this.id}`])
   }
 
   ordernow() {
@@ -135,7 +139,10 @@ export class OrderComponent implements OnInit {
       weight:this.selectedQuantity,
       NoOfItems:this.userEnteredQuantity,
       messageOnCake: this.messageOnCake,
-      deliveryType: "Store-pickUp"
+      deliveryType: "Store-pickUp",
+      cakeId:this.id,
+      type:this.mycake.productInfo?.type
+
       
       
     }
@@ -143,7 +150,28 @@ export class OrderComponent implements OnInit {
       this.snackbar.openScakBar('Congrats!!You have ordered Successfully!!', 'success')
 
     })
-    this.route.navigate([`OrderSummaryComponent/${this.id}`])
+    this.route.navigate([`viewallcakes`])
+    // this.route.navigate([`OrderSummaryComponent/${this.id}`])
    
   }
-}
+
+  userData() {
+      // Fetch the user details and pre-fill both online and offline order forms
+      this.userService.checkIfUserExit(this.loginservice.userEmail).subscribe((data) => {
+        this.user = data[0];
+        // Pre-fill both forms
+        this.userDataForOnline.firstName = this.user.firstName;
+        this.userDataForOnline.lastName = this.user.lastName;
+        this.userDataForOnline.phone = this.user.phone;
+        this.userDataForOnline.city=this.user.address?.city,
+
+        this.userDataForOnline.street=this.user.address?.street,
+      
+      this.userDataForOnline.state=this.user.address?.state,
+      this.userDataForOnline.zipCode=this.user.address?.zipCode,
+    
+        this.userDataForOffline.firstName = this.user.firstName;
+        this.userDataForOffline.lastName = this.user.lastName;
+        this.userDataForOffline.phone = this.user.phone;
+      });
+}}

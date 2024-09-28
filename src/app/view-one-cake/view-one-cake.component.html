@@ -50,8 +50,9 @@
       </mat-tab>
     </mat-tab-group>
     <div>
-      <button class="button" style="margin-left: 10px;width: 98%;background-color: rgb(21, 14, 225);" (click)="order()" *ngIf="!loginservice.isAdminLoggedIn&&loginservice.isUserLoggedIn"><span style="color: white;">Order Now</span></button></div>
-  </div>
+      <button class="button" style="margin-left: 10px;width: 98%;background-color:rgb(214, 225, 14) ;" (click)="Cart()" *ngIf="!loginservice.isAdminLoggedIn&&loginservice.isUserLoggedIn"><span style="color: rgb(0, 0, 0);">Add to Cart</span></button></div>
+      <button class="button" style="margin-left: 10px;width: 98%;background-color:rgb(225, 119, 14) ;" (click)="order()" *ngIf="!loginservice.isAdminLoggedIn&&loginservice.isUserLoggedIn"><span style="color: rgb(0, 0, 0);">Buy Now</span></button></div>
+
 </div>
 <br><br>
 <app-footer></app-footer>

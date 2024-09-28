@@ -36,7 +36,9 @@ import { OrderComponent } from './order/order.component';
 
 import {MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { OrderSummaryComponent } from './order-summary/order-summary.component'
+import { OrderSummaryComponent } from './order-summary/order-summary.component';
+import { CartComponent } from './cart/cart.component';
+import { AdminViewComponent } from './admin-view/admin-view.component'
 
 
 
@@ -54,7 +56,9 @@ import { OrderSummaryComponent } from './order-summary/order-summary.component'
     FooterComponent,
 
     OrderComponent,
-     OrderSummaryComponent
+     OrderSummaryComponent,
+     CartComponent,
+     AdminViewComponent
 
 
 

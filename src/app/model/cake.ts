@@ -17,6 +17,6 @@ export type cake={
         point3?:string;
     };
     image?:URL;
-    
+   
 
 }

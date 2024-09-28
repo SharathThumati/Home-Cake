@@ -1,13 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CakeService } from '../services/cake.service';
-import { LoginService } from '../services/login.service';
-import { UserService } from '../services/user.service';
-import { OrderService } from '../services/order.service';
-import { User } from '../model/user';
-import { cake } from '../model/cake';
-import { Order } from '../model/order';
-import { SnackbarService } from '../services/snackbar.service';
+
+// import { LoginService } from '../services/login.service';
+// import { UserService } from '../services/user.service';
+// import { OrderService } from '../services/order.service';
+// import { User } from '../model/user';
+// import { cake } from '../model/cake';
+// import { Order } from '../model/order';
+// import { SnackbarService } from '../services/snackbar.service';
+import { CakeService } from '../app/services/cake.service';
+import { cake } from '../app/model/cake';
+import { Order } from '../app/model/order';
+import { User } from '../app/model/user';
+import { LoginService } from '../app/services/login.service';
+import { UserService } from '../app/services/user.service';
+import { OrderService } from '../app/services/order.service';
+import { SnackbarService } from '../app/services/snackbar.service';
 
 
 @Component({

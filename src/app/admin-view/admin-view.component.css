@@ -1,0 +1,74 @@
+/* General Styles */
+h1.orders-title {
+    margin: 20px 10px;
+    color: #5e036c;
+    text-align: center;
+    font-size: 28px;
+  }
+  
+  /* Table Styles */
+  table.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  table.orders-table th {
+    padding: 15px;
+    font-size: 18px;
+    color: #5e036c;
+    background-color: #f7f7f7;
+    text-align: left;
+  }
+  
+  table.orders-table td {
+    padding: 15px;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Image Styling */
+  .orders-item-image {
+    width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Item Details */
+  .orders-item-details h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #5e036c;
+  }
+  
+  .orders-item-details p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Order Price and Other Information */
+  .orders-price h3, .orders-delivery-type h3, .orders-delivery-date h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .orders-price h3 {
+    color: #5e036c;
+  }
+  
+  /* Customer Details */
+  .orders-customer-details h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .orders-customer-details p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .orders-customer-details .customer-address {
+    font-size: 14px;
+    color: #555;
+  }
+  

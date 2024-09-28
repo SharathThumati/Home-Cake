@@ -25,7 +25,7 @@ export class UserService {
     return this.httpClient.get<User[]>("http://localhost:3000/users?email="+email+"&password="+password);
   }
   getUserByEmail(email:any){
-    return this.httpClient.get<User[]>("http://localhost:3000/users?email="+email)
+    return this.httpClient.get<User>("http://localhost:3000/users?email="+email)
   }
 }
 

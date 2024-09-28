@@ -23,4 +23,7 @@ export class HeaderComponent {
       this.loginservice.logOut();
       this.router.navigateByUrl('viewallcakes')
     }
+    goToCart() {
+      this.router.navigate(['cart']);
+    }
 }

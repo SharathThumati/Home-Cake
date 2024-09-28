@@ -1,4 +1,6 @@
 export type Order = {
+    
+    id?:number,
     itemName?:string,
     weight?:number,
     deliveryType?:string,
@@ -14,4 +16,7 @@ export type Order = {
     zipCode?: string,
     totalAmount?:number,
     NoOfItems?:number
+    quantity?:number
+    cakeId?:number,
+    type?:string;
 }
